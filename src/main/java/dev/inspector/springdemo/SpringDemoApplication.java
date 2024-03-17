@@ -13,6 +13,7 @@ import org.springframework.context.annotation.Bean;
 //import org.springframework.jms.connection.CachingConnectionFactory;
 //import org.springframework.jms.core.JmsTemplate;
 //import javax.jms.ConnectionFactory;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
@@ -20,7 +21,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @SpringBootApplication
 @EnableScheduling
 //@EnableJms
-public class SpringDemoApplication implements WebMvcConfigurer {
+@ComponentScan(basePackages = {"dev.inspector.springdemo", "dev.inspector.spring"})
+public class SpringDemoApplication /*implements WebMvcConfigurer*/ {
 
     public static void main(String[] args) {
         SpringApplication.run(SpringDemoApplication.class, args);

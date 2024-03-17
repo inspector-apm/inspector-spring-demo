@@ -5,7 +5,7 @@
 ``` 
 <dependency>
     <groupId>dev.inspector</groupId>
-	<artifactId>springdemo</artifactId>
+	<artifactId>springagent</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 </dependency>
 ```
