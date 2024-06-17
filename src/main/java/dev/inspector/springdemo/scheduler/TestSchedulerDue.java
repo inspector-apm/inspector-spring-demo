@@ -7,15 +7,15 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 @Component
-public class TestScheduler {
+public class TestSchedulerDue {
 
     @Autowired
     TestRepository testRepository;
 
     @Scheduled(fixedRate = 10000)
-    public void runTask() {
-        System.out.println("Running scheduled task...");
-        User user = new User(1L, "PinottoUno");
+    public void runTaskDue() {
+        System.out.println("Running scheduled task due...");
+        User user = new User(2L, "PinottoDue");
         testRepository.save(user);
     }
 }

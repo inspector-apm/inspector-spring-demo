@@ -11,5 +11,8 @@ spring:
         password: admin
 
 inspector:
-    ingestion-key: 69597a87ae16c25741ab1623c1b6be2e6b113ac8
-    time-to-flush: 10000 # 10 seconds
+    ingestion-key: {INGESTION_KEY: 69597a87ae16c25741ab1623c1b6be2e6b113ac8}
+    enabled: {ENABLED: true}
+    url: {URL: http://localhost:8080}
+    version: {VERSION: 1.0.0}
+    max-items: {MAX_ITEMS: 1000}
