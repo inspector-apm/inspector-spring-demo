@@ -16,3 +16,9 @@ inspector:
     url: {URL: http://localhost:8080}
     version: {VERSION: 1.0.0}
     max-items: {MAX_ITEMS: 1000}
+
+path:
+  path-list:
+    - "/rest"
+    - "/testing"
+    - "/variable"
