@@ -12,10 +12,10 @@ public class TestScheduler {
     @Autowired
     TestRepository testRepository;
 
-    @Scheduled(fixedRate = 10000)
+    @Scheduled(fixedRate = 1000000)
     public void runTask() {
         System.out.println("Running scheduled task...");
-        User user = new User(1L, "PinottoUno");
+        User user = new User(2L, "PinottoUno");
         testRepository.save(user);
     }
 }

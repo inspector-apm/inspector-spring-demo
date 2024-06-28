@@ -28,36 +28,6 @@ public class SpringDemoApplication /*implements WebMvcConfigurer*/ {
         SpringApplication.run(SpringDemoApplication.class, args);
     }
 
-    // Creates a User entry at startup
-    @Bean
-    CommandLineRunner commandLineRunner(TestRepository testRepository) {
-        return args -> {
-            User user = new User(1L, "Gianni");
-            testRepository.save(user);
-        };
-    }
 
-//    @Bean
-//    public ConnectionFactory connectionFactory() {
-//        ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory();
-//        connectionFactory.setBrokerURL("tcp://localhost:61616");
-//        connectionFactory.setUserName("admin");
-//        connectionFactory.setPassword("secret");
-//        return new CachingConnectionFactory(connectionFactory);
-//    }
-//
-//    @Bean
-//    public JmsTemplate jmsTemplate() {
-//        JmsTemplate jmsTemplate = new JmsTemplate();
-//        jmsTemplate.setConnectionFactory(connectionFactory());
-//        return jmsTemplate;
-//    }
-//
-//    @Bean
-//    public JmsListenerContainerFactory<?> jmsListenerContainerFactory(ConnectionFactory connectionFactory) {
-//        DefaultJmsListenerContainerFactory factory = new DefaultJmsListenerContainerFactory();
-//        factory.setConnectionFactory(connectionFactory);
-//        return factory;
-//    }
 
 }
