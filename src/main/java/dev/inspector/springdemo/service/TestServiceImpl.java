@@ -31,6 +31,10 @@ public class TestServiceImpl implements TestService {
         ResponseEntity<String> responseEntity = restTemplate.getForEntity("http://httpbin.org/get", String.class);
     }
 
+    public User saveUser(User user) {
+        return testRepository.save(user);
+    }
+
 //    public void testMessagePush(String message) {
 //        jmsTemplate.convertAndSend("anotherQueue", message, messagePushInterceptor);
 //    }

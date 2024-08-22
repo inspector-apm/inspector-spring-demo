@@ -1,4 +1,4 @@
-package dev.inspector.springdemo.scheduler;
+/*package dev.inspector.springdemo.scheduler;
 
 import dev.inspector.springdemo.entity.User;
 import dev.inspector.springdemo.repository.TestRepository;
@@ -19,3 +19,4 @@ public class TestScheduler {
         testRepository.save(user);
     }
 }
+*/
