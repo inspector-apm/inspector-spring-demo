@@ -8,7 +8,7 @@
 <dependency>
     <groupId>dev.inspector</groupId>
 	<artifactId>springagent</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 </dependency>
 ```
 
@@ -26,9 +26,7 @@ inspector.ingestion-key=81e6d4df93e1bfad8e9f3c062022e3a0d8a77dce
 
 ### 4. Start the application
 
-Using the ide to start the application
-
-
+Using the IDE to start the application
 
 
 # Inspector Configuration Guide
@@ -39,20 +37,14 @@ This guide provides an overview of the necessary environment variables you need 
 
 To fully integrate Inspector, you need to set the following environment variables in your YAML file:
 
-1. **INSPECTOR_URL** - Specifies the URL endpoint where Inspector is hosted.
-    - Example: `INSPECTOR_URL="https://api.inspector.example.com"`
-
-2. **INSPECTOR_INGESTION_KEY** - Your unique ingestion key for authenticating API requests.
+1. **INSPECTOR_INGESTION_KEY** - Your unique ingestion key for authenticating API requests.
     - Example: `INSPECTOR_INGESTION_KEY="your_ingestion_key_here"`
 
-3. **INSPECTOR_ENABLE** - Determines whether Inspector is enabled or disabled.
+2. **INSPECTOR_ENABLE** - Determines whether Inspector is enabled or disabled.
     - Values: `true` or `false`
     - Example: `INSPECTOR_ENABLE=true`
 
-4. **INSPECTOR_VERSION** - Specifies the version of Inspector to be used.
-    - Example: `INSPECTOR_VERSION="1.0.0"`
-
-5. **INSPECTOR_MAX_ITEMS** - Defines the maximum number of items Inspector should handle per session.
+3 **INSPECTOR_MAX_ITEMS** - Defines the maximum number of items Inspector should handle per session.
     - Example: `INSPECTOR_MAX_ITEMS=1000`
 
 ## Configuration Example
@@ -61,8 +53,6 @@ Here is a sample snippet from a YAML configuration file integrating these enviro
 
 ```yaml
 environment:
-  INSPECTOR_URL: "https://api.inspector.example.com"
   INSPECTOR_INGESTION_KEY: "your_ingestion_key_here"
   INSPECTOR_ENABLE: true
-  INSPECTOR_VERSION: "1.0.0"
   INSPECTOR_MAX_ITEMS: 1000
