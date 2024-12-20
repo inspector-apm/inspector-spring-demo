@@ -3,20 +3,17 @@ package dev.inspector.springdemo.controller;
 import dev.inspector.springdemo.dto.UserDto;
 import dev.inspector.springdemo.entity.User;
 import dev.inspector.springdemo.service.TestServiceImpl;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.core.env.Environment;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.time.Instant;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
 
 @RestController
 @RequestMapping("/rest")
 public class TestController {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(TestController.class);
 
     @Autowired
     private TestServiceImpl testServiceImpl;
@@ -24,20 +21,27 @@ public class TestController {
     @GetMapping("/hello/{name}")
     User test(@PathVariable String name) {
         try {
-            System.out.println("REST request received.");
-            //Integer num = Integer.parseInt(name);
+            LOGGER.info("Request received for name {}", name);
             User user = testServiceImpl.findUser(name);
             return user;
         } catch (Exception e) {
-            String message = "Error: " + e.getMessage();
-            e.printStackTrace();
-            StackTraceElement[] stackTraceElements = e.getStackTrace();
-            stackTraceElements[0].getFileName();
-            stackTraceElements[0].getLineNumber();
-            //System.out.println(message);
+            LOGGER.error("Exception occurred", e);
             return null;
         }
     }
+
+    @GetMapping("/dbAndOutgoingHttp/hello/{name}")
+    User testDBAndHttpRequestMonitoring(@PathVariable String name) {
+        try {
+            LOGGER.info("Request received for name {}", name);
+            User user = testServiceImpl.findUserAndSendHTTPRequest(name);
+            return user;
+        } catch (Exception e) {
+            LOGGER.error("Exception occurred", e);
+            return null;
+        }
+    }
+
 
     @PostMapping("/hello/create")
     User create() {
