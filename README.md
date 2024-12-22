@@ -4,7 +4,7 @@
 
 ### 1. Add the following dependency to the pom.xml file
 
-``` 
+```xml
 <dependency>
     <groupId>dev.inspector</groupId>
 	<artifactId>springagent</artifactId>
@@ -20,7 +20,7 @@ mvn clean install
 
 ### 3. Add the following configuration to the application.properties file
 
-```
+```properties
 inspector.ingestion-key=81e6d4df93e1bfad8e9f3c062022e3a0d8a77dce
 ```
 
