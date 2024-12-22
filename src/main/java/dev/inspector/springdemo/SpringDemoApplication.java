@@ -21,13 +21,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @SpringBootApplication
 @EnableScheduling
 //@EnableJms
-@ComponentScan(basePackages = {"dev.inspector.springdemo", "dev.inspector.spring"})
 public class SpringDemoApplication /*implements WebMvcConfigurer*/ {
 
     public static void main(String[] args) {
         SpringApplication.run(SpringDemoApplication.class, args);
     }
-
-
 
 }

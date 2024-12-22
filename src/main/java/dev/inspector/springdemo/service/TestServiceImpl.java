@@ -15,28 +15,23 @@ public class TestServiceImpl implements TestService {
     private TestRepository testRepository;
     @Autowired
     private RestTemplate restTemplate;
-//    @Autowired
-//    private JmsTemplate jmsTemplate;
-//    @Autowired
-//    private MessagePushInterceptor messagePushInterceptor;
 
     public User findUser(String name) {
-        executeOutgoingRESTRequest();
-//        testMessagePush("Test message");
         User user = testRepository.findByName(name);
         return user;
     }
 
-    private void executeOutgoingRESTRequest() {
+    public void sendHTTPRequest() {
         ResponseEntity<String> responseEntity = restTemplate.getForEntity("http://httpbin.org/get", String.class);
+    }
+
+    public User findUserAndSendHTTPRequest(String name) {
+        sendHTTPRequest();
+        return findUser(name);
     }
 
     public User saveUser(User user) {
         return testRepository.save(user);
     }
-
-//    public void testMessagePush(String message) {
-//        jmsTemplate.convertAndSend("anotherQueue", message, messagePushInterceptor);
-//    }
 
 }
