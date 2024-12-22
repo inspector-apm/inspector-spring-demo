@@ -7,8 +7,8 @@
 ```xml
 <dependency>
     <groupId>dev.inspector</groupId>
-	<artifactId>springagent</artifactId>
-	<version>1.0.1</version>
+    <artifactId>springagent</artifactId>
+    <version>1.0.1</version>
 </dependency>
 ```
 
