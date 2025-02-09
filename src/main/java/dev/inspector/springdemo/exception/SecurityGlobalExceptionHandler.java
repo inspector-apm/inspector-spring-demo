@@ -9,21 +9,10 @@ import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.oauth2.core.OAuth2AuthenticationException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.context.request.WebRequest;
 
 @ControllerAdvice
 @Slf4j
-public class GlobalExceptionHandler {
-
-    @ExceptionHandler(Exception.class)
-    public ResponseEntity<Object> handleGeneralException(Exception ex, WebRequest request) {
-        log.error(ex.getMessage(), ex);
-        var errorDto = ErrorDTO.builder()
-                .code("General Exception")
-                .message(ex.getMessage())
-                .build();
-        return new ResponseEntity<>(ErrorResponseDTO.of(errorDto), HttpStatus.INTERNAL_SERVER_ERROR);
-    }
+public class SecurityGlobalExceptionHandler {
 
     @ExceptionHandler(OAuth2AuthenticationException.class)
     public ResponseEntity<Object> handleOAuth2Exception(OAuth2AuthenticationException ex) {
