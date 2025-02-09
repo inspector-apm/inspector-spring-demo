@@ -1,0 +1,4 @@
+curl --location --request PUT 'https://api.dev.fantastitch.net/api/v1/schemesv/schemes/multicolor/marking' \
+--header 'Accept: application/json, text/plain, */*' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnbWRyb3A2QGdtYWlsLmNvbSIsImF1ZCI6ImVkODQ2ZTM3LTE5YzItNGMxYy1iMGZiLWEzNzBlMzA1MmEwYiIsImFwcFZlcnNpb24iOiIwLjEyMyIsIm5iZiI6MTczOTAxNDAwNiwiaXNzIjoiaHR0cHM6Ly9hcGkuZGV2LmZhbnRhc3RpdGNoLm5ldC9hcGkvdjEvYXV0aHN2IiwidmVyaWZpZWQiOnRydWUsImV4cCI6MTczOTAxNzYwNiwiaWF0IjoxNzM5MDE0MDA2LCJ1c2VySWQiOiJnbWRyb3A2QGdtYWlsLmNvbSIsImRldmljZUlkIjoibmVpbG8tdGVzdDAyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9DVVNUT01FUiJdfQ.qCLteDfQ-GYbF0fdnFml6O4MO99oVdE5OukXjaH-DWo' \
+--form 'file=@"/Users/romanneilo/Documents/UpWork/Merejka2/Fantastitch_scheme_server/src/test/resources/responses/marking.zip"'

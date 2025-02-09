@@ -1,0 +1,7 @@
+curl --location 'https://api.dev.fantastitch.net/api/v1/schemesv/brand/scheme/96394ff6-404f-422e-8a79-2a4dc5e45118/users' \
+--header 'Accept: application/json, text/plain, */*' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXJ5bmFAZmFudGFzdGl0Y2gubmV0IiwiYXVkIjoiZmFudGFzdGljaF9icmFuZF93ZWIiLCJuYmYiOjE3Mzg5NDQ2NzcsImlzcyI6Imh0dHBzOi8vYXBpLmRldi5mYW50YXN0aXRjaC5uZXQvYXBpL3YxL3dlYmF1dGhzdiIsInZlcmlmaWVkIjp0cnVlLCJleHAiOjE3Mzg5NDgyNzcsImlhdCI6MTczODk0NDY3NywidXNlcklkIjoiMTNiYWRmMjUtNjg4Ni00MzJjLWI1YmItN2I3ODlkYWMxOTQ4IiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9CUkFORF9XRUJfQ1VTVE9NRVIiXX0.-p17FuVaeDJaqpLY83SIT5Y4K0oSCtRRYH88imJgkjM' \
+--data '{
+    "userIds": ["954b4755-510d-4c82-8e34-3c9c200342d8"]
+}'

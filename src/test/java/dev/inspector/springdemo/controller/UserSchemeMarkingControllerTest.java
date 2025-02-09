@@ -49,16 +49,12 @@ class UserSchemeMarkingControllerTest {
 
     private static final String FILE_PUT_URL = "/schemes/scheme_1/marking";
     private static final String FILE_PATCH_URL = "/schemes/scheme_1/marking";
-    private static final String FILE_SCHEME_URL = "/schemes/scheme_1/marking";
-    private static final String GET_SCHEME_VERSION_URL = "/schemes/scheme_1/marking/version";
     private static final String USER_ID = "user_1";
     private static final String SCHEME_ID = "scheme_1";
-    private static final LocalDateTime CREATE_DATE = LocalDateTime.of(2020, 1, 1, 0, 0);
     private static final LocalDateTime UPDATE_DATE = LocalDateTime.of(2024, 1, 1, 0, 0);
     private static final ObjectWriter OBJECT_WRITER = new ObjectMapper().writer();
     private static final MultipartFile MULTIPART_FILE =
             new MockMultipartFile("file", "test.zip", "application/json", "".getBytes());
-    private static final File FILE = Paths.get("src/test/resources/test.json").toFile();
 
     @Autowired
     private MockMvc mockMvc;
