@@ -23,4 +23,6 @@ path:
     - "/testing"
     - "/variable"
 
+jwt:
+  secret: "neilo-test_neilo-test_neilo-test_neilo-test_neilo-test_neilo-test"
 

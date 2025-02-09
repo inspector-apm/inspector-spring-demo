@@ -1,0 +1,9 @@
+{
+  "schemeId" : "schemeId",
+  "newAccessedUsers" : [ {
+    "userId" : "userId_1",
+    "userLogin" : "userId_1",
+    "schemeId" : "schemeId_1"
+  } ],
+  "alreadyAccessedUsers" : []
+}
