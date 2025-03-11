@@ -94,4 +94,15 @@ public class TestController {
             return new ResponseEntity<>("File upload failed: " + e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+
+
+    @GetMapping("/blacklist")
+    String testBlacklist() {
+       return "SUCCESS";
+    }
+
+    @GetMapping("v1/blacklist")
+    String testV1Blacklist() {
+        return "SUCCESS";
+    }
 }
