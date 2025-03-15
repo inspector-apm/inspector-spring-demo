@@ -16,7 +16,8 @@ spring:
 
 inspector:
   ingestion-key: ${INGESTION_KEY:69597a87ae16c25741ab1623c1b6be2e6b113ac8}
-
+  url-paths-blacklist: /rest/*/blacklist, /blacklist*
+  tasks-blacklist: dev.inspector.springdemo.scheduler.TestScheduler.runTask
 path:
   path-list:
     - "/rest"
